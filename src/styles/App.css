@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: #888;
+  padding: 1em;
+  border: rgb(68, 68, 68) 5px solid;
+  border-radius: 20px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'ac ac c ms'
+    'mc mr m-minus m-plus'
+    'square-root sign percent divide'
+    'seven eight nine multiply'
+    'four five six subtract'
+    'one two three add'
+    'zero zero decimal equal';
+  gap: 0.25em;
+  margin: 0.5em 0;
+}
