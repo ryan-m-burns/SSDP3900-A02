@@ -7,10 +7,13 @@ services:
       dockerfile: Dockerfile.dev
     container_name: calculator-app-dev
     ports:
-      - "5173:5173"
+      - '5173:5173'
     volumes:
-      - ./:/app
-      - /app/node_modules
+      - .:/app
+      - node_modules:/app/node_modules
     environment:
       - NODE_ENV=development
     restart: unless-stopped
+
+volumes:
+  node_modules:
